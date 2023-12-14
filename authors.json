@@ -1,7 +1,7 @@
 [
-    {"name": "Jane Austen"},
-    {"name": "Charles Dickens"},
-    {"name": "Taras Shevchenko"},
-    {"name": "J. R. R. Tolkien"},
-    {"name": "Lesya Ukrainka"}
+    {"name": "Jane Austen", "id": "101"},
+    {"name": "Charles Dickens", "id": "102"},
+    {"name": "Taras Shevchenko", "id": "103"},
+    {"name": "J. R. R. Tolkien", "id": "104"},
+    {"name": "Lesya Ukrainka", "id": "105"}
 ]
