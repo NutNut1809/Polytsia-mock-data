@@ -1,7 +1,7 @@
 [
-    {"name": "Jane Austen", "id": "101"},
-    {"name": "Charles Dickens", "id": "102"},
-    {"name": "Taras Shevchenko", "id": "103"},
-    {"name": "J. R. R. Tolkien", "id": "104"},
-    {"name": "Lesya Ukrainka", "id": "105"}
+    {"name": "Jane Austen", "id": "101", "books":["001","002"]},
+    {"name": "Charles Dickens", "id": "102","books":["003","004"]},
+    {"name": "Taras Shevchenko", "id": "103","books":["005","006"]},
+    {"name": "J. R. R. Tolkien", "id": "104","books":["007","008"]},
+    {"name": "Lesya Ukrainka", "id": "105","books":["009","010"]}
 ]
