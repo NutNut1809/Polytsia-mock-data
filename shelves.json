@@ -1,5 +1,5 @@
 [
-    {"id": "123", "name": "Bookshelf A"},
-    {"id": "456", "name": "Bookshelf B"},
-    {"id": "789", "name": "Bookshelf C"}
+    {"id": "123", "name": "Bookshelf A", "books": ["001", "002"]},
+    {"id": "456", "name": "Bookshelf B", "books": ["003", "004"]},
+    {"id": "789", "name": "Bookshelf C", "books": ["005", "006", "007","008", "009", "010"]}
 ]
