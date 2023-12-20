@@ -1,12 +1,12 @@
 [
-    {"name": "Pride and Prejudice"},
-    {"name": "Sense and Sensibility"},
-    {"name": "Great Expectations"},
-    {"name": "A Tale of Two Cities"},
-    {"name": "Кобзар"},
-    {"name": "Гайдамаки"},
-    {"name": "The Lord of the Rings"},
-    {"name": "The Hobbit"},
-    {"name": "Лісова пісня"},
-    {"name": "Каменярі"}
+    {"name": "Pride and Prejudice", "author": "Jane Austen", "authorId": "101"},
+    {"name": "Sense and Sensibility", "author": "Jane Austen", "authorId": "101"},
+    {"name": "Great Expectations", "author": "Charles Dickens", "authorId": "102"},
+    {"name": "A Tale of Two Cities", "author": "Charles Dickens", "authorId": "102"},
+    {"name": "Кобзар", "author": "Taras Shevchenko", "authorId": "103"},
+    {"name": "Гайдамаки", "author": "Taras Shevchenko", "authorId": "103"},
+    {"name": "The Lord of the Rings", "author": "J. R. R. Tolkien", "authorId": "104"},
+    {"name": "The Hobbit", "author": "J. R. R. Tolkien", "authorId": "104"},
+    {"name": "Лісова пісня", "author": "Lesya Ukrainka", "authorId": "105"},
+    {"name": "Каменярі", "author": "Lesya Ukrainka", "authorId": "105"}
 ]
