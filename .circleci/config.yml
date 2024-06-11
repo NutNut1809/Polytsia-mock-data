@@ -8,23 +8,20 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  test:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
+  automated-api-tests:
     docker:
-      # Specify the version you desire here
-      # See: https://circleci.com/developer/images/image/cimg/base
-      - image: cimg/base:current
-
-    # Add steps to the job
-    # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
+      - image: cimg/base:2021.04
     steps:
-      # Checkout the code as the first step.
       - checkout
-      # Replace this with a real test runner invocation
       - run:
-          name: Run tests
-          command: echo 'replace me with real tests!' && false
+          name: Install Postman CLI
+          command: |
+            curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+      - run:
+          name: Login using your API key
+          command: postman login --with-api-key $POSTMAN_API_KEY
+      - run: |
+            postman collection run "postman/collections/Contact List Documentation Copy.json" -e "29531332-8bdf68f9-3d8a-4ebb-8090-5830f13a5561" --integration-id "164314-${CIRCLE_WORKFLOW_JOB_ID}"
   build:
     docker:
       - image: cimg/base:current
@@ -50,10 +47,10 @@ jobs:
 workflows:
   example:
     jobs:
-      - test
+      - automated-api-tests
       - build:
           requires:
-            - test
+            - automated-api-tests
       - deploy:
           requires:
-            - test
+            - automated-api-tests
