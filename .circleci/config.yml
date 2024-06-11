@@ -22,6 +22,9 @@ jobs:
           command: postman login --with-api-key $POSTMAN_API_KEY
       - run: |
             postman collection run "postman/collections/Contact List Documentation Copy.json" -e "29531332-8bdf68f9-3d8a-4ebb-8090-5830f13a5561" --integration-id "164314-${CIRCLE_WORKFLOW_JOB_ID}"
+      - run:
+          name: Lint your API using Postman CLI
+          command: postman api lint b0406785-79bd-4897-ac7c-0814826f11ad --integration-id 164314
   build:
     docker:
       - image: cimg/base:current
